@@ -1,0 +1,18 @@
+h2{
+          color:orange;
+        }
+
+.gradient{
+          background: linear-gradient(
+90deg,rgba(45,156,219,.6),rgba(155,81,224,.6));
+}
+.btn{
+          padding:10px 20px;
+          border-radius: 25px;
+          color:white;
+          text-decoration: none;
+          box-shadow: 13px 13px 34px -8px rgba(0,0,0,0.75);
+-webkit-box-shadow: 13px 13px 34px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: 13px 13px 34px -8px rgba(0,0,0,0.75);
+
+}
