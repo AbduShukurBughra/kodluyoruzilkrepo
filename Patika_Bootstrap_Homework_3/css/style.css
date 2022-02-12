@@ -1,130 +1,285 @@
-.navbarbg {
-          height: 55px;
-          background-color: white;
-        }
-        
-        input.searche {
-          height: 36px;
-          max-width: 500px;
-          background-color: #eef3f8;
-          border: 0;
-        }
-        
-        input.searche::placeholder {
-          font-size: 14px;
-          color: gray;
-          background-image: url(/bootstraplinkedinclone/assets/search-solid.svg);
-          background-repeat: no-repeat;
-          background-size: 7%;
-        }
-        
-        .body {
-          background-color: #f3f2ef;
-        }
-        
-        .menutext {
-          font-size: 13px;
-          font-family: Arial, Helvetica, sans-serif;
-          color: gray;
-          margin-top: 5px;
-          font-weight: lighter;
-        }
-        
-        .menutext:hover {
-          color: black;
-        }
-        
-        button.mediatext {
-          color: #5f5f5f;
-        }
-        
-        button.mediatext:hover {
-          color: #5f5f5f;
-        }
-        
-        .mediatext {
-          font-size: 15px;
-          font-weight: bold;
-          font-family: Arial, Helvetica, sans-serif;
-          color: #5f5f5f;
-        }
-        
-        i {
-          color: gray;
-          margin-top: 8px;
-        }
-        i:hover {
-          color: black;
-        }
-        
-        input.content {
-          border-radius: 40px;
-          height: 45px;
-        }
-        input.content::placeholder {
-          font-weight: bolder;
-          font-size: 14px;
-          font-family: Arial, Helvetica, sans-serif;
-          background-image: url(/bootstraplinkedinclone/assets/edit-regular.svg);
-          background-repeat: no-repeat;
-          background-size: auto;
-        }
-        
-        div.card {
-          border-radius: 10px;
-        }
-        
-        .header {
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 16px;
-          font-weight: bolder;
-        }
-        
-        .view {
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-            Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-          font-size: 12px;
-          font-weight: bold;
-          color: #5f5f5f;
-        }
-        
-        .categories {
-          font-size: 13px;
-          font-weight: bold;
-          color: #0a66c2;
-        }
-        
-        li {
-          font-size: 14px;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-            Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-          font-weight: bold;
-        }
-        
-        .link {
-          font-size: 12px;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-            Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-          color: #5f5f5f;
-        }
-        
-        button.ref {
-          color: white;
-        }
-        
-        button.ref:hover {
-          color: #5f5f5f;
-        }
-        
-        .postphoto {
-          border-radius: 50%;
-          width: 50px;
-          height: 50px;
-        }
-        .posttext {
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-            Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-          font-weight: bold;
-          font-size: 14px;
-          margin-left: 8px;
-        }
+body {
+  background-color: #F3F2EF;
+}
+
+header {
+  background-color: rgba(var(--d87, 255, 255, 255), 1);
+  align-items: center;
+}
+
+main section {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* .color-body {
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+} */
+
+header nav {
+  position: relative;
+  width: 100%;
+  height: 52px;
+}
+
+header nav a i{
+  margin-top: 4px;
+}
+
+input.search {
+  height: 36px;
+  max-width: 500px;
+  background-color: #eef3f8;
+  border: 0;
+}
+
+.menutext {
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(70, 70, 70);
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.menutext:hover {
+  color: black;
+}
+
+.r-buttons {
+  text-align: center;
+  max-height: 50px;
+}
+
+.r-buttons li a i {
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-top {
+  top: 75px;
+}
+
+.btn:hover {
+  background-color: #F3F2EF;
+}
+
+.mediatext {
+  font-size: 14px;
+  font-weight: 500;
+  color: gray;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.postphoto {
+  width: 50px; 
+  height: 50px; 
+  border: 2px solid white;
+  border-radius:50%;
+}
+
+.ok {
+  margin-left: 14px;
+}
+
+.applause {
+  margin-left: -10px;
+  border-radius: 90%;
+}
+
+.heart {
+  margin-left: -10px;
+  border-radius: 90%;
+}
+
+.ref {
+  margin-left: 18px;
+  color: gray;
+}
+
+.ref:hover {
+  color: gray;
+}
+
+.cardbottom {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.pointcircle {
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+  padding: 0px;
+  margin-top: 23px;
+  margin-left: 11px;
+  background: rgb(1, 163, 1);
+  border: 2px solid white;
+  color: #666;
+  font: 32px Arial, sans-serif;
+}
+
+/* XS SCREEN */
+@media (max-width: 575.98px) {
+  .dcon 
+  {
+      min-width: 320px;
+  }
+  
+  .nav-h 
+  {
+      min-height: 64px;
+  }
+
+  .disp-center 
+  {   
+      padding-left: 6px;
+      min-width: 430px;
+      margin: 0 auto;
+  }
+
+  .disp-center-in
+  {
+      min-width: 430px;
+      margin: 0 auto;
+  }
+  
+  .srch-btn
+  {
+      margin-left: 0px;
+      padding-left: 0px;
+  }
+}
+
+/* SM SCREEN */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .pro-sm {
+      margin-top: 2px;
+  }
+
+  .job-sm {
+      margin-left: -44px;
+  }
+
+  .disp-center
+  {   
+      padding-left: auto 0px;
+      min-width: 570px;
+      margin: 0 auto;
+  }
+
+  .disp-center-in
+  {
+      min-width: 540px;
+      margin: 0 auto;
+  }
+
+  .srch-btn
+  {
+      margin-left: 26px;
+  }
+}
+
+/* MD SCREEN */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .dcon 
+  {
+      max-width: 670px;
+      margin: 0 auto;
+  }
+
+  .disp-left 
+  {
+      min-width: 190px;
+  }
+
+  .disp-center
+  {
+      min-width: 465px;
+  }
+
+  .srch-btn
+  {
+      margin-left: 0px;
+      padding-left: 12px;
+  }
+}
+
+/* LG SCREEN */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .dcon
+  {
+      max-width: 1020px;
+      margin: 0 auto;
+  }
+
+  .disp-left
+  {
+      width: 180px;
+      margin-left: 6px;
+  }
+
+  .disp-center
+  {
+      width: 435px;
+      margin: 0 auto;
+  }
+
+  .disp-center-in 
+  {
+      margin-left: 0px;
+  }
+
+  .disp-right
+  {
+      width: 300px;
+  }
+
+  .disp-right-in 
+  {
+      margin-left: -76px;
+  }
+
+  .srch-btn
+  {
+      margin-left: 0px;
+      padding-left: 4px;
+  }
+}
+
+/* XL SCREEN */
+@media (min-width: 1200px) {
+  .dcon 
+  {
+      max-width: 1135px;
+      margin: 0 auto;
+  }
+
+  .disp-left
+  {
+      width: 14.2rem;
+      padding: 0;
+  }
+
+  .disp-center
+  {
+      margin: 0 auto;
+      width: 540px; 
+  }
+
+  .disp-center-in 
+  {
+      margin-left: -20px;
+  }
+
+  .disp-right
+  {
+      width: 19.7rem; 
+      margin-left: -36px; 
+  }
+
+  .srch-btn
+  {
+      margin-left: 26px;
+  }
+}
