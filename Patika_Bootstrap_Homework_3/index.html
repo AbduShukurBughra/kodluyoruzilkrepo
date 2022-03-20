@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tittle and Logo -->
+    <title>Linkedin Clone</title>
+    <link rel="shortcut icon" href="assets/linkedin-brands.svg">
+
+    <!-- Search Area Hover-->
+    <style>
+        input:hover {
+            background-color: #F3F2EF;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <header class="border-bottom fixed-top">
+
+        <nav class="navbar navbar-expand-sm navbar-light bg-white mx-auto nav-h" style="max-width: 1158px;">
+            <!-- Logo -->
+            <a class="navbar-brand mr-2" href="#" style="padding-top: 6px;">
+                <i class="fab fa-linkedin fa-lg" style="color: #0a66c2; font-size: 2.45rem;">
+                </i>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Search Form -->
+            <form class="form-inline ml-auto d-none d-lg-block">
+                <input class="form-control mr-sm-2 empty search" type="search" placeholder="  Arama Yap"
+                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, FontAwesome; padding-left: 16px; margin-left: 0px; height: 34px; width: 280px"
+                    aria-label="Search" />
+            </form>
+
+            <!-- Right Buttons -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav ml-lg-auto r-buttons" style="max-width: 1100px;">
+                    <li class="nav-item ml-1 d-md-block d-lg-none">
+                        <a class="nav-link" href="#"><i class="fas fa-search fa">
+                                <div class="menutext d-none d-md-block" style="min-width: 74px;">Arama Yap</div>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-item  ml-sm-4 ml-md-1 mr-1">
+                        <a class="nav-link" href="#"><i class="fas fa-home fa-lg"
+                                style="color: black; margin: 0; padding: 0;">
+                                <div class="menutext d-none d-md-block" style="color: black; min-width: 70px;">Ana Sayfa
+                                </div>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-item  ml-sm-4 ml-md-1 mr-2">
+                        <a class="nav-link" href="#"><i class="fas fa-user-friends fa-lg">
+                                <div class="menutext d-none d-md-block">Ağım</div>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-item  ml-sm-4 ml-md-1 mr-1">
+                        <a class="nav-link" href="#"><i class="fas fa-briefcase fa-lg">
+                                <div class="menutext d-none d-md-block" style="min-width: 65px;">İş İlanları</div>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-item  ml-sm-4 ml-md-1 mr-1">
+                        <a class="nav-link" href="#"><i class="fas fa-comment-dots fa-lg">
+                                <div class="menutext d-none d-md-block">Mesajlaşma</div>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-item  ml-sm-4 ml-md-1 mr-1">
+                        <a class="nav-link" href="#"><i class="fas fa-bell fa-lg">
+                                <div class="menutext d-none d-md-block" style="min-width: 70px;">Bildirimler</div>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-item pro-sm ml-sm-4 ml-md-1 " style="margin-right: 20px;">
+                        <a class="nav-link" href="https://www.instagram.com/kodluyoruz" target="_blank"
+                            style="padding-top: 3px;">
+                            <img src="assets/profilepic.jpg" class=""
+                                style="width: 24px; height: 24px; border-radius: 50%;" />
+                            <div class="menutext d-none d-md-block" style="margin-top: -1px; min-width: 50px;">
+                                Ben<i class="fas fa-caret-down fa-lg ml-1" style="color: rgb(100, 100, 100);"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item border-left mr-sm-4 mr-md-0">
+                        <a class="nav-link" style="margin-left: 21px;" href="#"><i class="fas fa-th fa-lg">
+                                <div class="menutext d-none d-md-block" style="min-width: 30px;">
+                                    İş<i class="fas fa-caret-down fa-lg ml-1" style="color: rgb(100, 100, 100);"></i>
+                                </div>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-item ml-lx-3 ml-sm-4 ml-md-0">
+                        <a class="nav-link job-sm" href="#"><i class="fas fa-chalkboard fa-lg">
+                                <div class="menutext d-none d-md-block" style="min-width: 80px;">İş İlanı Yayınla</div>
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Nav End -->
+
+    <!-- Main Start -->
+    <main>
+        <div class="container-fluid p-0" style="margin: 75px auto 0;">
+            <div class="row p-0 justify-content-between dcon">
+
+                <!-- Left panel start-->
+                <section class="col-2 disp-left d-none d-md-block">
+
+                    <!-- User Profile Views -->
+                    <div class="card disp-left" style="border-radius: 8px;">
+                        <div>
+                            <div class="card-header d-flex justify-content-center" style="
+        background-image: url(https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fblogs-images.forbes.com%2Falejandrocremades%2Ffiles%2F2018%2F12%2Fbusiness-3605367_1920-1200x741.jpg);
+        height: 56px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                                <img src="assets/cengizmataracı.jfif" class="mx-auto d-block"
+                                    style="width: 70px; height: 70px; border: 2px solid white;border-radius:50%; margin-top: 8px;" />
+                            </div>
+                            <div class="card-body" style="padding: 0px">
+                                <p class="card-title header"
+                                    style="padding: 10px 10px 0px; text-align: center; margin-top: 42px; margin-bottom: 0px;">
+                                    <a href="https://www.linkedin.com/in/cengizcmataraci/" target="_blank"
+                                        style="color: #212529; font-weight: 500;">Cemal Cengiz Mataracı</a>
+                                </p>
+                                <div style="color: #5f5f5f; text-align: center; font-size: 12px; padding: 2px 8px;">
+                                    Software Developer at Navlungo - Dijital Lojistik Platformu
+                                </div>
+                                <hr />
+                                <div class="card-text"
+                                    style="margin-bottom: 16px; padding: 0 12px; font-size: 12px; color: #5f5f5f; font-weight: 600;">
+                                    <div>
+                                        <span>Profilinizi kimler görüntüledi </span><span class="float-right"
+                                            style="color: #0a66c2">447</span>
+                                    </div>
+                                    <div>
+                                        <span>Yayınınız için görüntüleme </span><span class="float-right"
+                                            style="color: #0a66c2">150</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer pt-2"
+                                style="padding: 12px; background-color: white; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+                                <i class="fas fa-bookmark" style="color: #5f5f5f;"></i>
+                                <span class="ml-2"
+                                    style="font-size: 12px; font-weight: 500;color: #383838;">Ögelerim</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Pages -->
+                    <div class="card disp-left mt-2" style="border-radius: 8px;">
+                        <div class="card-header bg-white border-0"
+                            style="margin-bottom: -22px; font-size: 18px; border-radius: 8px; padding: 12px">
+                            Sayfalarım
+                        </div>
+                        <div class="card-body" style="padding: 20px 12px;">
+                            <div class="card-title">
+                                <img src="assets/kablosuzbeyin.jpg" style="width: 32px; height: 32px" />
+                                <div style="
+                          font-size: 15px;
+                          font-weight: bold;
+                          margin-top: -35px;
+                          margin-left: 37px;
+                        ">
+                                    Kablosuz Beyin
+                                </div>
+                                <div class="" style="
+                          font-size: 13px;
+                          font-weight: bold;
+                          color: gray;
+                          margin-left: 38px;
+                        ">
+                                    Sayfa Bildirimleri
+                                    <span class="float-right" style="color: #0a66c2">10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent -->
+                    <div class="card disp-left mt-2 sticky-top" style="border-radius: 8px;">
+                        <div class="card-header bg-white border-0"
+                            style="font-size: 12px; border-radius: 8px; padding-left: 12px; padding-bottom: 6px;">
+                            En Yeni
+                        </div>
+                        <div class="card-body pt-0 border-bottom" style="padding: 0 12px;">
+                            <div class="card-title">
+                                <div>
+                                    <i class="fas fa-hashtag"
+                                        style="font-size: 13px; font-weight: bold; color: #5e5e5e; "></i><span
+                                        class="ml-2 font-weight-500"
+                                        style="font-size: 13px; color: #5e5e5e">kodluyoruz</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-hashtag"
+                                        style="font-size: 13px; font-weight: bold; color: #5e5e5e;"></i><span
+                                        class="ml-2 font-weight-500"
+                                        style="font-size: 13px; color: #5e5e5e">front-end</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-hashtag"
+                                        style="font-size: 13px; font-weight: bold; color: #5e5e5e;"></i><span
+                                        class="ml-2 font-weight-bolfont-weight-500"
+                                        style="font-size: 13px; color: #5e5e5e">html</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-hashtag"
+                                        style="font-size: 13px; font-weight: bold; color: #5e5e5e;"></i><span
+                                        class="ml-2 font-weight-bolfont-weight-500"
+                                        style="font-size: 13px; color: #5e5e5e">css</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-hashtag"
+                                        style="font-size: 13px; font-weight: bold; color: #5e5e5e;"></i><span
+                                        class="ml-2 font-weight-bolfont-weight-500"
+                                        style="font-size: 13px; color: #5e5e5e">bootstrap</span>
+                                </div>
+                                <div class="mt-3 categories" style="color: #0a66c2; font-size: 12px; font-weight: 500;">
+                                    Gruplar</div>
+                                <div>
+                                    <span class="mt-3 categories"
+                                        style="color: #0a66c2; font-size: 12px; font-weight: 500;">Etkinlikler</span>
+                                    <span class="float-right"
+                                        style="font-size: 23px; font-weight: bold; color: #5e5e5e; line-height: 22px;">+</span>
+                                </div>
+                                <div class="mt-3 mb-1 categories"
+                                    style="color: #0a66c2; font-size: 12px; font-weight: 500;">Takip edilen hashtagler
+                                </div>
+                                <div>
+                                    <i class="fas fa-hashtag"
+                                        style="font-size: 13px; font-weight: bold; color: #5e5e5e;"></i><span
+                                        class="ml-2 font-weight-500"
+                                        style="font-size: 13px; color: #5e5e5e">kodluyoruz</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-hashtag"
+                                        style="font-size: 13px; font-weight: bold; color: #5e5e5e;"></i><span
+                                        class="ml-2 font-weight-500"
+                                        style="font-size: 13px; color: #5e5e5e">front-end</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white mx-auto border-0">
+                            Daha fazla keşfet
+                        </div>
+                    </div>
+
+                </section>
+                <!-- Left panel end-->
+
+                <!-- Middle panel start-->
+                <section class="col-6 disp-center">
+
+                    <!-- Prepare Post -->
+                    <div class="card disp-center disp-center-in dc-lg-in" style="border-radius: 8px;">
+                        <div class="card-body" style="padding: 12px 12px 8px 12px;">
+                            <form class="input-group mb-2">
+                                <img src="assets/cengizmataracı.jfif" class="mr-auto d-block input-group-prepend"
+                                    style="width: 50px; height: 50px; border: 1px solid white;border-radius:50%;" />
+                                <input type="text" class="form-control content"
+                                    style="border-radius: 40px; margin-top: 0px; margin-left: 6px; height: 50px; font-size: 14px; font-weight: 500;"
+                                    placeholder="Gönderi hazırla" />
+                            </form>
+                            <span>
+                                <button class="btn btn-transparent">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        data-supported-dps="24x24" width="24" height="24" focusable="false"
+                                        style="fill: #70B5F9; margin-top: -4px;">
+                                        <path
+                                            d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm1 13a1 1 0 01-.29.71L16 14l-2 2-6-6-4 4V7a1 1 0 011-1h14a1 1 0 011 1zm-2-7a2 2 0 11-2-2 2 2 0 012 2z">
+                                        </path>
+                                    </svg>
+                                    <span class="ml-1 mediatext">Fotoğraf</span>
+                                </button>
+                            </span>
+                            <span><button class="btn btn-transparent srch-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        data-supported-dps="24x24" width="24" height="24" focusable="false"
+                                        style="fill: #7FC15E; margin-top: -4px;">
+                                        <path
+                                            d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm-9 12V8l6 4z">
+                                        </path>
+                                    </svg><span class="ml-2 mediatext">Video</span>
+                                </button></span>
+                            <span><button class="btn btn-transparent srch-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        data-supported-dps="24x24" width="24" height="24" focusable="false"
+                                        style="fill: #E7A33E; margin-top: -4px;">
+                                        <path
+                                            d="M3 3v15a3 3 0 003 3h12a3 3 0 003-3V3zm13 1.75A1.25 1.25 0 1114.75 6 1.25 1.25 0 0116 4.75zm-8 0A1.25 1.25 0 116.75 6 1.25 1.25 0 018 4.75zM19 18a1 1 0 01-1 1H6a1 1 0 01-1-1V9h14zm-5.9-3a1 1 0 00-1-1H12a3.12 3.12 0 00-1 .2l-1-.2v-3h3.9v1H11v1.15a3.7 3.7 0 011.05-.15 1.89 1.89 0 012 1.78V15a1.92 1.92 0 01-1.84 2H12a1.88 1.88 0 01-2-1.75 1 1 0 010-.25h1a.89.89 0 001 1h.1a.94.94 0 001-.88z">
+                                        </path>
+                                    </svg><span class="ml-2 mediatext">Etkinlik</span>
+                                </button></span>
+                            <span><button class="btn btn-transparent srch-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        data-supported-dps="24x24" fill="" width="24" height="24" focusable="false"
+                                        style="fill: #F5987E; margin-top: -4px;">
+                                        <path
+                                            d="M21 3v2H3V3zm-6 6h6V7h-6zm0 4h6v-2h-6zm0 4h6v-2h-6zM3 21h18v-2H3zM13 7H3v10h10z">
+                                        </path>
+                                    </svg><span class="ml-2 mediatext">Yazı yaz</span>
+                                </button></span>
+                        </div>
+                    </div>
+
+                    <!-- Sort area start-->
+                    <div class="disp-center disp-center-in dc-lg-in" style="height: 32px; align-items: center;">
+                        <div style="height: 15px; border-bottom: 2px solid #D8D8D5; text-align: end">
+                            <span
+                                style="background-color: #F3F2EF; min-height: 14px; display: inline-flex;
+                            align-items: center;padding-left: 10px; font-size: 12px; font-weight: 400; color: rgb(99, 99, 99);">
+                                Sıralama ölçütü: <b style="padding-left:4px;color: rgb(70, 70, 70);">En Önemli</b> <i
+                                    class="fas fa-caret-down fa-lg"
+                                    style="padding-left: 8px; padding-right: 2px; margin-top: 0px; color: rgb(70, 70, 70);"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Sort area end-->
+
+                    <!-- Posts Start -->
+
+                    <!-- Post 1 Start -->
+                    <div class="card disp-center disp-center-in dc-lg-in" style="border-radius: 8px;">
+                        <div class="card-header bg-white" style="border: 0px; border-radius: 8px; padding-left: 16px;">
+                            <span>
+                                <div class="row">
+                                    <div class="col-2" style="max-width: 75px;">
+                                        <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGiWpTUewQ76Q/profile-displayphoto-shrink_400_400/0/1613923672228?e=1648684800&v=beta&t=Krswor3tUIvPESY4oWGFl92vc2SvzuWsXUtdhur0NL0"
+                                            class="postphoto">
+                                    </div>
+                                    <div class="col-9" style="margin-left: -4px;">
+                                        <div class="row" style="margin-top: -3px;">
+                                            <span class="posttext"><a href="https://www.linkedin.com/in/malan/"
+                                                    target="_blank"
+                                                    style="color: #212529; font-size: 14px; font-weight: 500;">David J.
+                                                    Malan</a>
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                            <span class=""
+                                                style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 12px; color: #474747; margin-top: -2px;">I
+                                                teach CS50
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                            <span class=""
+                                                style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 10px; color: #474747; margin-top: -2px;">25a
+                                                <i class="fas fa-globe-americas fa-sm"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-1" style="padding-right: 0px; margin-top: -3px;">
+                                        <span class="float-right">
+                                            <i class="fas fa-ellipsis-h fa-md"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="card-text ml-3"
+                                style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 15px; color: black; margin-bottom: 8px;">
+                                They have done great things! Tebrikler Kodluyoruz!
+                            </p>
+                            <div>
+                                <img src="https://pbs.twimg.com/media/Em2_xBbXUAEVDx1.jpg" class="card-img-top mb-1"
+                                    alt="..." style="border-radius: 0px;" />
+                            </div>
+                            <div style="margin-top: -6px;">
+                                <span class="ok"><img src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb"
+                                        style="padding-bottom: 2px;" alt=""></span>
+                                <span class="applause"><img
+                                        src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f"
+                                        style="padding-bottom: 2px;" alt=""></span>
+                                <span class="heart"
+                                    style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 12px; color: #474747;"><img
+                                        src="https://static-exp1.licdn.com/sc/h/7fx9nkd7mx8avdpqm5hqcbi97"
+                                        style="padding-bottom: 3px;" alt=""> 958</span>
+                            </div>
+
+                            <div class="card-footer bg-white mt-1"
+                                style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="far fa-thumbs-up fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Beğen</span></i>
+                                    </button></span>
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="far fa-comment fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Yorum Yap</span></i>
+                                    </button></span>
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="fas fa-share fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Paylaş</span></i>
+                                    </button></span>
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="fas fa-paper-plane fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Gönder</span></i>
+                                    </button></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post 1 End -->
+
+                    <!-- Post 2 Start -->
+                    <div class="card disp-center disp-center-in dc-lg-in" style="border-radius: 8px; margin-top: 6px;">
+                        <div class="card-header bg-white" style="border: 0px; border-radius: 8px; padding-left: 16px;">
+                            <span>
+                                <div class="row">
+                                    <div class="col-2" style="max-width: 75px;">
+                                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHnKB8mDzkLfg/profile-displayphoto-shrink_800_800/0/1629708170546?e=1649289600&v=beta&t=gKddM_H6lFIUeg12Z7xDjycz_iG0IAHoFl6jKA6sDu8"
+                                            class="postphoto">
+                                    </div>
+                                    <div class="col-9" style="margin-left: -4px;">
+                                        <div class="row" style="margin-top: -3px;">
+                                            <span class="posttext"><a href="https://www.linkedin.com/in/malan/"
+                                                    target="_blank"
+                                                    style="color: #212529; font-size: 14px; font-weight: 500;">Ozan
+                                                    Halis İLTER</a>
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                            <span class=""
+                                                style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 12px; color: #474747; margin-top: -2px;">Team
+                                                Leader at YetGen | CodeCraft | Kablosuz Beyin | IEEE MEF...</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class=""
+                                                style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 10px; color: #474747; margin-top: -2px;">1s
+                                                <i class="fas fa-globe-americas fa-sm"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-1" style="padding-right: 0px; margin-top: -3px;">
+                                        <span class="float-right">
+                                            <i class="fas fa-ellipsis-h fa-md"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="card-text ml-3"
+                                style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 15px; color: black; margin-bottom: 8px;">
+                                Erhan Erkut hocamız ile birlikte YetGen'de harika şeyler yapmak için geliyoruz!
+                            </p>
+                            <div>
+                                <img src="https://miro.medium.com/max/1080/1*gdDWFSvHDt57DS2zsh_0Bg.png"
+                                    class="card-img-top mb-1" alt="..." style="border-radius: 0px;" />
+                            </div>
+                            <div style="margin-top: -6px;">
+                                <span class="ok"><img src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb"
+                                        style="padding-bottom: 2px;" alt=""></span>
+                                <span class="applause"><img
+                                        src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f"
+                                        style="padding-bottom: 2px;" alt=""></span>
+                                <span class="heart"
+                                    style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 12px; color: #474747;"><img
+                                        src="https://static-exp1.licdn.com/sc/h/7fx9nkd7mx8avdpqm5hqcbi97"
+                                        style="padding-bottom: 3px;" alt=""> 210</span>
+                            </div>
+
+                            <div class="card-footer bg-white mt-1"
+                                style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="far fa-thumbs-up fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Beğen</span></i>
+                                    </button></span>
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="far fa-comment fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Yorum Yap</span></i>
+                                    </button></span>
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="fas fa-share fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Paylaş</span></i>
+                                    </button></span>
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="fas fa-paper-plane fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Gönder</span></i>
+                                    </button></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post 2 End -->
+
+                    <!-- Post 3 Start -->
+                    <div class="card disp-center disp-center-in dc-lg-in mb-4"
+                        style="border-radius: 8px; margin-top: 6px;">
+                        <div class="card-header bg-white" style="border: 0px; border-radius: 8px; padding-left: 16px;">
+                            <span>
+                                <div class="row">
+                                    <div class="col-2" style="max-width: 75px;">
+                                        <img src="https://media-exp1.licdn.com/dms/image/C5603AQFOc4FfGSHrgw/profile-displayphoto-shrink_800_800/0/1619210485825?e=1649289600&v=beta&t=RTam9M83B9UDZHvpRHl_uRF1PFMy6sDfwar8II8hvJI"
+                                            class="postphoto">
+                                    </div>
+                                    <div class="col-9" style="margin-left: -4px;">
+                                        <div class="row" style="margin-top: -3px;">
+                                            <span class="posttext"><a href="https://www.linkedin.com/in/malan/"
+                                                    target="_blank"
+                                                    style="color: #212529; font-size: 14px; font-weight: 500;">Ramazan
+                                                    Sancar</a>
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                            <span class=""
+                                                style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 12px; color: #474747; margin-top: -2px;">Co-Founder
+                                                at Kablosuz Beyin | Intern & Community Lead at Kod...</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class=""
+                                                style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 10px; color: #474747; margin-top: -2px;">25a
+                                                <i class="fas fa-globe-americas fa-sm"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-1" style="padding-right: 0px; margin-top: -3px;">
+                                        <span class="float-right">
+                                            <i class="fas fa-ellipsis-h fa-md"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="card-text ml-3"
+                                style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 15px; color: black; margin-bottom: 8px;">
+                                Merhaba,🚀 Kodluyoruz 'un tamamen Türkçeleştirerek online ve...
+                            </p>
+                            <div>
+                                <img src="https://media-exp1.licdn.com/dms/image/sync/C4E27AQEe-0a-tALYWQ/articleshare-shrink_800/0/1643492660176?e=1643648400&v=beta&t=3k-0wt053twfulG0nvn8f3UXIkX30PzFOIWF0wxnibU"
+                                    class="card-img-top mb-1" alt="..." style="border-radius: 0px;" />
+                            </div>
+                            <div style="margin-top: -6px;">
+                                <span class="ok"><img src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb"
+                                        style="padding-bottom: 2px;" alt=""></span>
+                                <span class="applause"><img
+                                        src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f"
+                                        style="padding-bottom: 2px;" alt=""></span>
+                                <span class="heart"
+                                    style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 12px; color: #474747;"><img
+                                        src="https://static-exp1.licdn.com/sc/h/7fx9nkd7mx8avdpqm5hqcbi97"
+                                        style="padding-bottom: 3px;" alt=""> 224</span>
+                            </div>
+
+                            <div class="card-footer bg-white mt-1"
+                                style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="far fa-thumbs-up fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Beğen</span></i>
+                                    </button></span>
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="far fa-comment fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Yorum Yap</span></i>
+                                    </button></span>
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="fas fa-share fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Paylaş</span></i>
+                                    </button></span>
+                                <span><button class="ref btn btn-transparent">
+                                        <i class="fas fa-paper-plane fa-md" style="font-size: 1.2rem"><span
+                                                class="ml-2 mediatext">Gönder</span></i>
+                                    </button></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post 3 End -->
+
+                    <!-- Posts End -->
+
+                </section>
+                <!-- Middle panel end-->
+
+                <!-- Right panel start-->
+                <section class="col-3 p-0 disp-right d-none d-lg-block" style="border-radius: 8px;">
+
+                    <!-- Add your stream start -->
+                    <div class="card disp-right disp-right-in" style="border-radius: 8px;">
+                        <div class="card-header bg-white border-0"
+                            style="border-radius: 8px;margin-bottom: 2px ;padding-left: 12px; font-weight: 600;padding-right: 12px;">
+                            <span>Akışınıza ekleyin</span><span><i class="fas fa-info-circle float-right"
+                                    style="color: #666666; padding-top: 6px;"></i></span>
+                        </div>
+
+                        <!-- Suggestion 1 start -->
+                        <div class="card-title" style="padding-bottom: 14px">
+                            <div class="row" style="margin-left: 12px;">
+                                <div class="col-2" style="padding-left: 0px; padding-right: 0px;">
+                                    <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQEG_MlSuwzeFw/company-logo_200_200/0/1573099722403?e=1651708800&v=beta&t=n8-SrIcdrc5ig_vg8qN5wSVm4vJNZ4-nKg8NLU3WLGE"
+                                        style="width: 50px; height: 50px; border-radius: 50%; padding: 0;" />
+                                </div>
+                                <div class="col-4 align-self-center" style="padding-left: 0px;">
+                                    <div class="header ml-2 text-center"
+                                        style="font-size: 14px; font-weight: bold; display: inline;">Codecraft</div>
+
+                                </div>
+                                <div class="col-6 align-self-center">
+                                    <span class="float-right" style="margin-right: 12px;"><button
+                                            class="btn btn-outline-info" style="border-radius: 50px; color: #0a66c2;">
+                                            <strong>+ Takip Et</strong>
+                                        </button></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Suggestion 1 end -->
+
+                        <!-- Suggestion 2 start -->
+                        <div class="card-title" style="padding-bottom: 14px">
+                            <div class="row" style="margin-left: 12px;">
+                                <div class="col-2" style="padding-left: 0px; padding-right: 0px;">
+                                    <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQF7ydVqrVTvqg/company-logo_200_200/0/1587802313117?e=1651708800&v=beta&t=sytP3MPMZoiC8ADH3z1fwtVOyV1R6xvJvN9XD8djcfg"
+                                        style="width: 50px; height: 50px; border-radius: 50%; padding: 0;" />
+                                </div>
+                                <div class="col-4 align-self-center" style="padding-left: 0px;">
+                                    <div class="header ml-2 text-center"
+                                        style="font-size: 14px; font-weight: bold; display: inline;">Podfresh</div>
+
+                                </div>
+                                <div class="col-6 align-self-center">
+                                    <span class="float-right" style="margin-right: 12px;"><button
+                                            class="btn btn-outline-info" style="border-radius: 50px; color: #0a66c2;">
+                                            <strong>+ Takip Et</strong>
+                                        </button></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Suggestion 2 end -->
+
+                        <!-- Suggestion 3 start -->
+                        <div class="card-title">
+                            <div class="row" style="margin-left: 12px;">
+                                <div class="col-2" style="padding-left: 0px; padding-right: 0px;">
+                                    <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQGKi25Vo-YjDA/company-logo_200_200/0/1634553374919?e=1651708800&v=beta&t=xF1VjCi__C-_3CjQ2MyFthoErmRI9QBIxc3bmzrGneQ"
+                                        style="width: 50px; height: 50px; border-radius: 50%; padding: 0;" />
+                                </div>
+                                <div class="col-4 align-self-center" style="padding-left: 0px;">
+                                    <div class="header ml-2 text-center"
+                                        style="font-size: 14px; font-weight: bold; display: inline;">Navlungo</div>
+
+                                </div>
+                                <div class="col-6 align-self-center">
+                                    <span class="float-right" style="margin-right: 12px;"><button
+                                            class="btn btn-outline-info" style="border-radius: 50px; color: #0a66c2;">
+                                            <strong>+ Takip Et</strong>
+                                        </button></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Suggestion 3 end -->
+
+                        <div class="card-footer bg-white border-0"
+                            style="font-size: 14px; color: #7c7c7c; padding-left: 12px;border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+                            <strong>Tüm tavsiyeleri görüntüle <i class="fas fa-long-arrow-alt-right fa-lg"
+                                    style="padding-left: 4px;"></i></strong>
+                        </div>
+                    </div>
+                    <!-- Add your stream end -->
+
+                    <!-- Most viewed start -->
+                    <div class="card disp-right disp-right-in mt-2" style="border-radius: 8px;">
+                        <div class="card-header bg-white border-0" style="border-radius: 8px; padding: 12px;">
+                            <span>Bugünün en çok izlenen eğitimleri</span><span><i
+                                    class="fas fa-info-circle float-right"
+                                    style="color: #666666; padding-right: 0px; padding-top: 6px;"></i></span>
+                        </div>
+                        <div class="card-title">
+                            <ol style="padding-left: 28px;">
+                                <li style="font-weight: 500;">
+                                    The Six Morning Habits of High Perf...
+                                    <div style="
+                            font-weight: lighter;
+                            font-size: 13px;
+                            color: #5f5f5f;
+                          ">
+                                        Pete Mocakatais | How to be awesome at you...
+                                    </div>
+                                </li>
+                                <li class="mt-2" style="font-weight: 500;">
+                                    Onconscious Blas
+                                    <div style="
+                            font-weight: lighter;
+                            font-size: 13px;
+                            color: #5f5f5f;
+                          ">
+                                        Stacey Gordon
+                                    </div>
+                                </li>
+                                <li class="mt-2" style="font-weight: 500;">
+                                    Critical Thinking for Better Judgme...
+                                    <div style="
+                            font-weight: lighter;
+                            font-size: 13px;
+                            color: #5f5f5f;
+                          ">
+                                        Becki Saltzman
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="card-footer"
+                            style="background-color: white ;color: #0a66c2; font-size: 15px; margin-top: -25px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; padding: 12px;">
+                            Linkedin Learning'de daha fazlasını göster
+                        </div>
+                    </div>
+                    <!-- Most viewed end -->
+
+                    <!-- Linkedin Corporate start -->
+                    <div class="disp-right disp-right-in text-center sticky-top" style="margin-top: 10px;">
+                        <div>
+                            <a href="https://about.linkedin.com/" class="link mr-3"
+                                style="font-size: 12px; color: gray;">Hakkında</a>
+                            <a href="https://www.linkedin.com/accessibility?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BT6H7rzDzR%2FSQEvO%2BuBKdSw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-compactfooter.accessibility"
+                                class="link mr-3" style="font-size: 12px; color: gray;">Erişilebilirlik</a>
+                            <a href="https://www.linkedin.com/help/linkedin?trk=footer_d_flagship3_feed&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BT6H7rzDzR%2FSQEvO%2BuBKdSw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-compactfooter.help"
+                                class="link" style="font-size: 12px; color: gray;">Yardım Merkezi</a>
+                        </div>
+                        <div>
+                            <a href="" class="link mr-3" style="font-size: 12px; color: gray;">Gizlilik ve Koşullar</a>
+                            <a href="https://www.linkedin.com/help/linkedin/answer/62931?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BT6H7rzDzR%2FSQEvO%2BuBKdSw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-compactfooter.ad_choices"
+                                class="link" style="font-size: 12px; color: gray;">Reklam Tercihleri</a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/ad/start?trk=n_nav_ads_rr&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BT6H7rzDzR%2FSQEvO%2BuBKdSw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-compactfooter.advertising"
+                                class="link" style="font-size: 12px; color: gray;">Reklam</a>
+                            <a href="https://www.linkedin.com/company/setup/new/" class="link"
+                                style="font-size: 12px; color: gray;">Ticari Hizmetler</a>
+                        </div>
+                        <div>
+                            <a href="#" style="font-size: 12px; color: gray;">Linkedin uygulamasını yükle</a>
+                            <a href="#" class="link" style="font-size: 12px; color: gray; padding-left: 6px;">Daha
+                                Fazla</a>
+                        </div>
+
+                        <div class="text-center" style="margin-top: 10px;margin-left: 3px;">
+                            <img src="assets/linkedin-logo.svg" width="60px" height="20px"
+                                style="padding-bottom: 3px;" /><span
+                                style="font-size: 12px; padding-left: 6px;">Linkedin Corporation ©
+                                2021</span>
+                        </div>
+                    </div>
+                    <!-- Linkedin Corporate end-->
+
+                </section>
+                <!-- Right panel end-->
+
+            </div>
+        </div>
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="card disp-right disp-right-in fixed-bottom ml-auto"
+            style="border-top-left-radius: 8px; border-top-right-radius: 8px;width: 290px;">
+
+            <div class="card-title mb-0">
+                <div class="row" style="margin: 5px;padding-bottom: 4px;">
+
+                    <div class="col-1 align-self-center" style="padding-left: 2px; padding-right: 0px;">
+                        <img src="assets/profilepic.jpg" style="width: 32px; height: 32px;border-radius: 50%;" />
+                    </div>
+                    <div class="col-1"
+                        style="padding-left: 0px; padding-bottom: 0px; margin-left: -8px;margin-bottom: -12px;">
+                        <div class="pointcircle">
+                        </div>
+                    </div>
+
+                    <div class="col-4 align-self-center" style="padding-left: 1px; padding-right: 0px;">
+                        <div class="header ml-1 text-center"
+                            style="font-size: 14px; font-weight: 500; display: inline;">
+                            Mesajlaşma
+                        </div>
+                    </div>
+                    <div class="col-6 align-self-center" style="color: rgb(97, 97, 97); padding: 0;">
+                        <span class="float-right">
+                            <i class="fas fa-ellipsis-h fa-md"></i>
+                            <i class="far fa-edit pl-2"></i>
+                            <i class="fas fa-chevron-up pl-2"></i>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
